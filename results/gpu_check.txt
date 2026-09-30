@@ -1,0 +1,8 @@
+PyTorch: 2.7.1+cu126
+PhysicsNeMo: 1.3.0
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+Model device: cuda:0
+Output shape: (1024, 2)
+Initial loss: 0.7585293054580688
+Final loss: 0.0006095687858760357
+GPU training check passed

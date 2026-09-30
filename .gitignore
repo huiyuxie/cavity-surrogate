@@ -1,0 +1,11 @@
+.venv
+[1-9]*/
+[0-9]*.[0-9]*/
+
+**/constant/polyMesh/
+processor*/
+
+log*
+postProcessing/
+
+*.foam
