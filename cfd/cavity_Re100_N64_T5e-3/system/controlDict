@@ -20,14 +20,14 @@ startFrom       startTime;
 startTime       0;
 
 stopAt          endTime;
-endTime         5;
+endTime         10;
 
 deltaT          0.0005;
 
 writeControl    timeStep;
 writeInterval   200;
 
-purgeWrite      0;
+purgeWrite      11;
 writeFormat     ascii;
 writePrecision  6;
 writeCompression off;
