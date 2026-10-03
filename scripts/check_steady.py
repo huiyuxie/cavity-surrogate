@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""
+"""Check whether the simulation has reached a steady state.
+
+Reads the internal velocity field at specified time snapshots and computes
+the maximum (E_max) and RMS (E_rms) velocity changes between consecutive
+snapshots normalized by U_LID.
+
 Run from the project root:
     python3 scripts/check_steady.py
 """
