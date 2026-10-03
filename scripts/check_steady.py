@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Compare saved OpenFOAM velocity fields on a fixed, equal-volume mesh.
-
-Supports ASCII U/U.gz with uniform or nonuniform List<vector> internal fields.
-Requires matching cell numbering and serial or reconstructed case results.
+"""
+Run from the project root:
+    python3 scripts/check_steady.py
 """
 
 from pathlib import Path
@@ -12,10 +11,10 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CASE = ROOT / "cfd/cavity_Re100_N64_T5e-3"
-TIMES = ["9", "9.5", "10"]
+CASE = ROOT / "cfd/cavity_Re100"
 N_CELLS = 64 * 64 * 1
-U_LID = 1.0  # m/s
+U_LID = 1.0
+TIMES = ["9", "9.5", "10"] # Change the endtime if the state is not steady
 
 
 def read_velocity(path, n_cells):
