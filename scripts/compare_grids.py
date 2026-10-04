@@ -177,7 +177,7 @@ def main():
             row[f"u_vertical_N{n}"] = float(lines[n][0][i])
             row[f"v_horizontal_N{n}"] = float(lines[n][1][i])
         line_rows.append(row)
-    write_rows(args.out / "centerlines.csv", line_rows)
+    write_rows(args.out / "grid_centerlines.csv", line_rows)
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.5), constrained_layout=True)
     for n, style in zip(sizes, ("--", "-.", "-")):
@@ -189,7 +189,7 @@ def main():
         axis.grid(alpha=0.25)
         axis.legend()
     fig.suptitle(f"Cavity grid comparison at t = {args.times[-1]:g} s")
-    fig.savefig(args.out / "centerlines.png", dpi=180)
+    fig.savefig(args.out / "grid_centerlines.png", dpi=180)
     plt.close(fig)
 
     print(f"Saved results to {args.out}")
