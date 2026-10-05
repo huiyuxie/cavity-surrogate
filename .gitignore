@@ -9,3 +9,7 @@ log*
 postProcessing/
 
 *.foam
+
+dataset*/
+
+__pycache__/
