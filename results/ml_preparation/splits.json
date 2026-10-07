@@ -1,0 +1,128 @@
+{
+  "train": [
+    {
+      "case": "Re50",
+      "Re": 50.0,
+      "file": "Re50.npz"
+    },
+    {
+      "case": "Re60",
+      "Re": 60.0,
+      "file": "Re60.npz"
+    },
+    {
+      "case": "Re70",
+      "Re": 70.0,
+      "file": "Re70.npz"
+    },
+    {
+      "case": "Re80",
+      "Re": 80.0,
+      "file": "Re80.npz"
+    },
+    {
+      "case": "Re90",
+      "Re": 90.0,
+      "file": "Re90.npz"
+    },
+    {
+      "case": "Re100",
+      "Re": 100.0,
+      "file": "Re100.npz"
+    },
+    {
+      "case": "Re110",
+      "Re": 110.0,
+      "file": "Re110.npz"
+    },
+    {
+      "case": "Re120",
+      "Re": 120.0,
+      "file": "Re120.npz"
+    },
+    {
+      "case": "Re130",
+      "Re": 130.0,
+      "file": "Re130.npz"
+    },
+    {
+      "case": "Re140",
+      "Re": 140.0,
+      "file": "Re140.npz"
+    },
+    {
+      "case": "Re150",
+      "Re": 150.0,
+      "file": "Re150.npz"
+    },
+    {
+      "case": "Re160",
+      "Re": 160.0,
+      "file": "Re160.npz"
+    },
+    {
+      "case": "Re170",
+      "Re": 170.0,
+      "file": "Re170.npz"
+    },
+    {
+      "case": "Re180",
+      "Re": 180.0,
+      "file": "Re180.npz"
+    },
+    {
+      "case": "Re190",
+      "Re": 190.0,
+      "file": "Re190.npz"
+    },
+    {
+      "case": "Re200",
+      "Re": 200.0,
+      "file": "Re200.npz"
+    }
+  ],
+  "val": [
+    {
+      "case": "Re65",
+      "Re": 65.0,
+      "file": "Re65.npz"
+    },
+    {
+      "case": "Re105",
+      "Re": 105.0,
+      "file": "Re105.npz"
+    },
+    {
+      "case": "Re145",
+      "Re": 145.0,
+      "file": "Re145.npz"
+    },
+    {
+      "case": "Re185",
+      "Re": 185.0,
+      "file": "Re185.npz"
+    }
+  ],
+  "test": [
+    {
+      "case": "Re55",
+      "Re": 55.0,
+      "file": "Re55.npz"
+    },
+    {
+      "case": "Re95",
+      "Re": 95.0,
+      "file": "Re95.npz"
+    },
+    {
+      "case": "Re135",
+      "Re": 135.0,
+      "file": "Re135.npz"
+    },
+    {
+      "case": "Re175",
+      "Re": 175.0,
+      "file": "Re175.npz"
+    }
+  ]
+}
