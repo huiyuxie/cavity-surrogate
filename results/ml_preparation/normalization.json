@@ -1,0 +1,16 @@
+{
+  "input_names": [
+    "x_over_L",
+    "y_over_L",
+    "Re"
+  ],
+  "xy_transform": "2 * xy_over_L - 1",
+  "re_transform": "2 * (Re - re_min) / (re_max - re_min) - 1",
+  "re_min": 50.0,
+  "re_max": 200.0,
+  "target_names": [
+    "u_over_Ulid",
+    "v_over_Ulid"
+  ],
+  "target_transform": "identity; already divided by U_lid during CFD export"
+}
