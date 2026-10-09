@@ -1,0 +1,8 @@
+{
+  "best_epoch": 1988,
+  "selection_metric": "train_mse",
+  "selection_value": 2.2161407717645263e-05,
+  "completed_epochs": 2000,
+  "interrupted": false,
+  "total_wall_seconds": 51.20458957902156
+}
