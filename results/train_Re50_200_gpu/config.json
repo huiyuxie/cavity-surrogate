@@ -1,0 +1,46 @@
+{
+  "mode": "train",
+  "data": "/home/huiyuxie/src/cavity-surrogate/data/cavity_Re50_200",
+  "epochs": 5000,
+  "batch_size": 1024,
+  "initial_lr": 0.001,
+  "seed": 42,
+  "device": "cuda",
+  "threads": 4,
+  "model_kwargs": {
+    "in_features": 3,
+    "out_features": 2,
+    "num_layers": 4,
+    "layer_size": 64,
+    "activation_fn": "tanh",
+    "weight_norm": false,
+    "skip_connections": false,
+    "adaptive_activations": false
+  },
+  "train_Re": [
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0,
+    100.0,
+    110.0,
+    120.0,
+    130.0,
+    140.0,
+    150.0,
+    160.0,
+    170.0,
+    180.0,
+    190.0,
+    200.0
+  ],
+  "val_Re": [
+    65.0,
+    105.0,
+    145.0,
+    185.0
+  ],
+  "torch_version": "2.7.1+cu126",
+  "physicsnemo_version": "1.3.0"
+}
