@@ -1,0 +1,8 @@
+{
+  "best_epoch": 4968,
+  "selection_metric": "val_mse",
+  "selection_value": 6.268848684105982e-07,
+  "completed_epochs": 5000,
+  "interrupted": false,
+  "total_wall_seconds": 1444.6143261690158
+}
