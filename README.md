@@ -180,41 +180,6 @@ Evaluate a newly trained model with the prediction commands above, replacing the
 
 ![Training and validation curves for the recorded GPU run](results/train_Re50_200_gpu/learning_curves.png)
 
-## Optional: regenerate CFD data
-
-The checked-in dataset is sufficient for the ML workflow. To regenerate it, install OpenFOAM Foundation 13 and initialize its shell environment. For the standard installation path:
-
-```bash
-source /opt/openfoam13/etc/bashrc
-blockMesh -case cfd/cavity_Re100
-checkMesh -case cfd/cavity_Re100
-```
-
-The template must already have the intended N64 mesh, geometry, and boundary conditions. The preparation script copies that mesh; `--n` records and validates the intended resolution rather than remeshing the template.
-
-Use a new batch directory:
-
-```bash
-python3 scripts/cavity_dataset.py prepare \
-  --template cfd/cavity_Re100 \
-  --root cfd/dataset_Re50_200 \
-  --n 64 \
-  --length 0.1 \
-  --u-lid 1.0
-
-python3 scripts/cavity_dataset.py run \
-  --root cfd/dataset_Re50_200
-
-python3 scripts/cavity_dataset.py check \
-  --root cfd/dataset_Re50_200
-
-python3 scripts/cavity_dataset.py export \
-  --root cfd/dataset_Re50_200 \
-  --out data/cavity_Re50_200_regenerated
-```
-
-The preparation command creates all 24 cases and a case manifest. Export requires successful completion and screens velocity changes over 9→9.5 s and 9.5→10 s. Default screening limits are `RMS/U_lid < 1e-4` and `max/U_lid < 1e-3`; these are project-specific temporal criteria, not universal CFD accuracy standards. Export also requires a new output directory.
-
 ## Numerical checks
 
 The stored Re100 grid comparison reports relative L2 differences of **3.3233%** for N32→N64 and **1.5366%** for N64→N128. The stored N64 time-step comparison reports **0.0883%** at 10 s. See [grid metrics](results/grid_study_Re100/grid_metrics.csv) and [time-step metrics](results/step_study_Re100/time_step_metrics.csv).
