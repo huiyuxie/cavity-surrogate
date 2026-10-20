@@ -53,25 +53,6 @@ The default model uses **four hidden layers of width 64**, `tanh` activations, a
 
 In multi-case training, **one shared best model** is selected using aggregate MSE across all validation points. Test velocity fields are not loaded during training.
 
-## Repository contents
-
-| Path | Purpose |
-|---|---|
-| `cfd/cavity_Re100/` | OpenFOAM cavity template |
-| `cfd/grid_study_Re100/` | N32/N64/N128 grid-study configurations |
-| `cfd/step_study_Re100/` | Base and half-time-step configurations |
-| `data/cavity_Re50_200/` | Exported CFD fields and `dataset_index.csv` |
-| `scripts/cavity_dataset.py` | Prepare, run, check, and export CFD cases |
-| `scripts/compare_grids.py` | Grid comparison and centerline plots |
-| `scripts/compare_steps.py` | Time-step comparison and temporal screening |
-| `scripts/prepare_ml_data.py` | Normalization, split metadata, and interpolation baseline |
-| `scripts/train_cavity.py` | Single-case fitting, multi-case training, and prediction |
-| `docs/environment.md` | Recorded host and GPU environment |
-| `docs/requirements-lock.txt` | Python environment snapshot |
-| `results/ml_preparation/` | Baseline metrics, plots, and normalization rules |
-| `results/train_Re50_200_gpu/` | Recorded 5,000-epoch GPU run and checkpoints |
-| `results/prediction_Re*/` | Test predictions, comparison plots, and error CSVs |
-
 ## Setup
 
 The recorded environment uses Ubuntu 24.04, Python 3.12.3, PyTorch 2.7.1 with CUDA 12.6, and PhysicsNeMo 1.3.0. See [the environment snapshot](docs/environment.md) and [dependency lock](docs/requirements-lock.txt).
